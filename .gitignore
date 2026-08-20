@@ -1,0 +1,61 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Capacitor / native local state
+android/.gradle/
+android/local.properties
+
+# Local Gradle distribution cache
+/gradle-8.11.1-all.zip
+
+# Environment files
+.env
+.env.*
+!.env.example
+!.env.local.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS/editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Build outputs
+android/app/build/
+ios/App/build/
+ios/export/
+
+# Workspace/private assistant artifacts
+.aime/
+.index/
+inner_skills/
+memory/
+output/
+tool_outputs/
+tools/
+aime_user_guides/
+aime_user_guides_meta/
+IDENTITY.md
+SOUL.md
+USER.md
+AGENT.md
+MEMORY.md
+*.lark.md
+ops_*.json
+*_ops.json
+*_cells.json
+sheet_updates_*.json
+daily_*.csv
+main_row_*.csv
+d51_value.json
+analyze_final_rca.py

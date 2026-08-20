@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ShortVideoApp</string>
+    <string name="title_activity_main">ShortVideoApp</string>
+    <string name="package_name">com.shortvideo.app</string>
+    <string name="custom_url_scheme">com.shortvideo.app</string>
+</resources>
