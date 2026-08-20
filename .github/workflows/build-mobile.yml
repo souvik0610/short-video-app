@@ -30,7 +30,7 @@ jobs:
         run: npm cache clean --force
 
       - name: Install dependencies
-        run: npm install next@15.1.0 react@19.0.0 react-dom@19.0.0 --legacy-peer-deps --save-prod
+        run: npm ci
 
       - name: Debug dependency install
         run: |
@@ -80,7 +80,7 @@ jobs:
         run: npm cache clean --force
 
       - name: Install dependencies
-        run: npm install next@15.1.0 react@19.0.0 react-dom@19.0.0 --legacy-peer-deps --save-prod
+        run: npm ci
 
       - name: Debug dependency install
         run: |
