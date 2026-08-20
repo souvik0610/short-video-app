@@ -28,7 +28,7 @@ jobs:
           java-version: 21
 
       - name: Install dependencies
-        run: npm install --force
+        run: npm install
 
       - name: Debug dependency install
         run: |
@@ -41,7 +41,7 @@ jobs:
           ls -la node_modules/.bin/next || true
 
       - name: Build web export
-        run: npm run build
+        run: npx next build
 
       - name: Sync Capacitor
         run: npx cap sync android
@@ -75,7 +75,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm install --force
+        run: npm install
 
       - name: Debug dependency install
         run: |
@@ -88,7 +88,7 @@ jobs:
           ls -la node_modules/.bin/next || true
 
       - name: Build web export
-        run: npm run build
+        run: npx next build
 
       - name: Sync Capacitor
         run: npx cap sync ios
