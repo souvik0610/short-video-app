@@ -30,7 +30,7 @@ jobs:
         run: npm cache clean --force
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: npm install --include=dev --legacy-peer-deps
 
       - name: Debug dependency install
         run: |
@@ -39,6 +39,7 @@ jobs:
           npm -v
           npm config get production
           npm config get omit
+          echo $NODE_ENV
           npm ls next || true
           ls -la node_modules/.bin/next || true
 
@@ -79,7 +80,7 @@ jobs:
         run: npm cache clean --force
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: npm install --include=dev --legacy-peer-deps
 
       - name: Debug dependency install
         run: |
@@ -88,6 +89,7 @@ jobs:
           npm -v
           npm config get production
           npm config get omit
+          echo $NODE_ENV
           npm ls next || true
           ls -la node_modules/.bin/next || true
 
