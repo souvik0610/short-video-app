@@ -30,7 +30,7 @@ jobs:
         run: npm cache clean --force
 
       - name: Install dependencies
-        run: npm install --include=dev --legacy-peer-deps
+        run: npm ci --legacy-peer-deps --loglevel=verbose || npm install --force --legacy-peer-deps --loglevel=verbose
 
       - name: Debug dependency install
         run: |
@@ -44,7 +44,7 @@ jobs:
           ls -la node_modules/.bin/next || true
 
       - name: Build web export
-        run: npm run build
+        run: npx next build
 
       - name: Sync Capacitor
         run: npx cap sync android
@@ -80,7 +80,7 @@ jobs:
         run: npm cache clean --force
 
       - name: Install dependencies
-        run: npm install --include=dev --legacy-peer-deps
+        run: npm ci --legacy-peer-deps --loglevel=verbose || npm install --force --legacy-peer-deps --loglevel=verbose
 
       - name: Debug dependency install
         run: |
@@ -94,7 +94,7 @@ jobs:
           ls -la node_modules/.bin/next || true
 
       - name: Build web export
-        run: npm run build
+        run: npx next build
 
       - name: Sync Capacitor
         run: npx cap sync ios
