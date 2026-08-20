@@ -28,10 +28,10 @@ jobs:
           java-version: 21
 
       - name: Install dependencies
-        run: npm install --include=dev
+        run: npm install --production=false
 
       - name: Build web export
-        run: npm run build
+        run: npx next build
 
       - name: Sync Capacitor
         run: npx cap sync android
@@ -65,10 +65,10 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm install --include=dev
+        run: npm install --production=false
 
       - name: Build web export
-        run: npm run build
+        run: npx next build
 
       - name: Sync Capacitor
         run: npx cap sync ios
